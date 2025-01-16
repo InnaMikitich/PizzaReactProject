@@ -1,9 +1,18 @@
 import React from "react";
+import classNames from "classnames";
 
-class Button extends React.Component {
-   render() {
-      return 
-   }
+function Button({ onClick, className, outline, children }) {
+  
+   return (
+       <button 
+       onClick={onClick}
+       className={classNames('button', className, {
+         'button--outline' : outline,
+      },
+   )}>
+      {children}
+      </button>
+   )
 
 }
 
