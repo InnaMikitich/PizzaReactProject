@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Header from './Header';
-import Button from './Button';
+import Header from './Components/Header';
+import Button from './Components/Button';
 
 function App() {
 
