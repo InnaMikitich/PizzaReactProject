@@ -2,7 +2,7 @@
   "pizzas": [
     {
       "id": 0,
-      "imageUrl": "https://media.dodostatic.net/image/r:292x292/11ef1eb0f2e525a6963c334b9eaf6848.jpg",
+      "imageUrl": "https://media.dodostatic.net/image/r:233x233/11ee7d5f06cb389898c7ff7b707f03a0.avif",
       "name": "Пепперони Фреш с перцем",
       "types": [0, 1],
       "sizes": [26, 30, 40],
