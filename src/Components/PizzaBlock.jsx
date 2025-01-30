@@ -82,7 +82,12 @@ PizzaBlock.propTypes = {
     name: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    types: PropTypes.array.isRequired,
-    sizes : PropTypes.array.isRequired,
+    types: PropTypes.arrayOf(PropTypes.number).isRequired,
+    sizes : PropTypes.arrayOf(PropTypes.number).isRequired,
 }
+
+PizzaBlock.defaltProps ={
+    types: [],
+    sizes: [],
+};
 export default PizzaBlock;
