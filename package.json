@@ -5,6 +5,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
     "axios": "^1.7.9",
+    
     "classnames": "^2.5.1",
     "cra-template": "1.2.0",
     "prop-types": "^15.8.1",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "npx json-server --watch public/db.json --port=3001"
+       
   },
   "eslintConfig": {
     "extends": [
@@ -42,4 +45,5 @@
       "last 1 safari version"
     ]
   }
+  
 }
