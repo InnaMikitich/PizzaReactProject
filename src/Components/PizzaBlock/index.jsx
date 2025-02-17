@@ -1,8 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import PizzaLoadinBlock from './LoadingBlock';
-import LoadingBlock from './LoadingBlock';
+
 
 
 
