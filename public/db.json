@@ -16,9 +16,9 @@
       "name": "Сырная",
       "types": [0],
       "sizes": [26, 40],
-      "price": 245,
+      "price": 205,
       "category": 1,
-      "rating": 6
+      "rating": 4
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "sizes": [26, 40],
       "price": 295,
       "category": 1,
-      "rating": 4
+      "rating": 6
     },
     {
       "id": 3,
