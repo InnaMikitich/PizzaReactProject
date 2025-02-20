@@ -20,9 +20,9 @@ const SortPopup = React.memo(function SortPopup({items, activeSortType, onClickS
 
   const handleOutsideClick = (e) => {
       if (e.target.offsetParent !== sortRef.current) {
-          setVisiblePopup(false);
+        setVisiblePopup(false);
       }
-  }
+  };
 
   React.useEffect(() => {
      document.body.addEventListener('click', handleOutsideClick);
