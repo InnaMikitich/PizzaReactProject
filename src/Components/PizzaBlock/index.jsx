@@ -10,7 +10,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza})
  
 
     const [activeType, setActiveType] = React.useState(types[0]);
-    const [activeSize, setActiveSize] = React.useState(sizes[0]);
+    const [activeSize, setActiveSize] = React.useState(0);
     const availableTypes = ['тонкое', 'традиционное']; 
     const availableSizes = [26, 30, 40]; 
 
@@ -24,7 +24,17 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza})
         setActiveSize(index);
     }
 
-
+    const onAddPizza = () => {
+      const obj = {
+        id, 
+        name,
+        imageUrl,
+        price,
+        size: availableSizes[activeSize],
+        type: availableTypes[activeType],
+      };
+      onClickAddPizza(obj) ;
+}
   return (
     <div className="pizza-block">
     <img
@@ -65,7 +75,8 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza})
     </div>
     <div className="pizza-block__bottom">
     <div className="pizza-block__price">от {price}₽</div>
-    <Button onClick={() => onClickAddPizza({ id, name, imageUrl, price})} className="button--add" outline>
+    <Button onClick={onAddPizza} 
+    className="button--add" outline>
     <svg
       width="12"
       height="12"
@@ -93,7 +104,7 @@ PizzaBlock.propTypes = {
     types: PropTypes.arrayOf(PropTypes.number).isRequired,
     sizes : PropTypes.arrayOf(PropTypes.number).isRequired,
     onClickAddPizza: PropTypes.func,
-  
+    
 }
 
 PizzaBlock.defaltProps ={
