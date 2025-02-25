@@ -6,7 +6,7 @@ import Button from '../Button';
 
 
 
-function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza}) {
+function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, addedCount}) {
  
 
     const [activeType, setActiveType] = React.useState(types[0]);
@@ -90,7 +90,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza})
       />
     </svg>
     <span>Добавить</span>
-    <i>2</i>
+    {addedCount && <i>{addedCount}</i>}
     </Button>
     </div>
     </div>
@@ -104,6 +104,7 @@ PizzaBlock.propTypes = {
     types: PropTypes.arrayOf(PropTypes.number).isRequired,
     sizes : PropTypes.arrayOf(PropTypes.number).isRequired,
     onClickAddPizza: PropTypes.func,
+    addedCount: PropTypes.number.isRequired,
     
 }
 
