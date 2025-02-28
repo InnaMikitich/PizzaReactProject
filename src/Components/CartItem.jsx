@@ -1,17 +1,17 @@
 import React from 'react';
 
-function CartItem() {
+function CartItem({name, type, size, imageUrl, totalPrice }) {
   return (
     <div className="cart__item">
           <div className="cart__item-img">
               <img
                   className="pizza-block__image"
-                  src="https://media.dodostatic.net/image/r:292x292/11ee7d5ec8ff89fdb4eb4c2fa1a066fe.jpg"
+                  src={imageUrl}
                   alt="Pizza" />
           </div>
           <div className="cart__item-info">
-              <h3>Сырный цыпленок</h3>
-              <p>тонкое тесто, 26 см.</p>
+              <h3>{name}</h3>
+              <p>{type} тесто, {size} см.</p>
           </div>
           <div className="cart__item-count">
               <div className="button button--outline button--circle cart__item-count-minus">
@@ -31,7 +31,7 @@ function CartItem() {
               </div>
           </div>
           <div className="cart__item-price">
-              <b>770 ₽</b>
+              <b>{totalPrice} ₽</b>
           </div>
           <div className="cart__item-remove">
               <div className="button button--outline button--circle">
