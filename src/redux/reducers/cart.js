@@ -29,6 +29,9 @@ const cart = (state = initialState, action) => {
             const allPizzas = [].concat.apply([], items);
             const totalPrice = getTotalPrice(allPizzas);
 
+
+          
+
             
             return {
                 ...state,
@@ -40,6 +43,23 @@ const cart = (state = initialState, action) => {
                
             }
       
+        case 'CLEAR_CART':
+            return {
+                totalPrice: 0,
+                totalCount: 0,
+                items: {},
+            };
+
+        case 'REMOVE_CART_ITEM':{ 
+        const newItems = {
+            ...state.items
+        }
+        delete newItems[action.payload];
+        return {
+            ...state,
+            items: newItems,
+        };   
+    }
         default:
             return state;
     }
