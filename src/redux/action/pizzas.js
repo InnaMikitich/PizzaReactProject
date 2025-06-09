@@ -52,7 +52,7 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
   dispatch(setLoaded(false));
 
 
-  const baseUrl = 'http://192.168.1.100:3001'; 
+  const baseUrl = 'http://192.168.31.211:3001'; 
 
   const url = `${baseUrl}/pizzas?${
     category !== null ? `category=${category}&` : ''
