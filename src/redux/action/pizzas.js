@@ -18,7 +18,7 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
 export const fetchPizzas = (sortBy, category) => (dispatch) => {
     dispatch(setLoaded(false));
     
-    const url = `http://localhost:3001/pizzas?${
+    const url = `https://drive.google.com/file/d/1QStCwqtgxhzESg3-e92__5UYnRyGFlmm/view?usp=drive_link${
         category !== null ? `category=${category}` : ''
     }&_sort=${sortBy.type}&_order=${sortBy.order}`;
 
