@@ -18,7 +18,7 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
 export const fetchPizzas = (sortBy, category) => (dispatch) => {
     dispatch(setLoaded(false));
     
-    const url = `https://github.com/InnaMikitich/PizzaReactProject/blob/main/public/db.json?${
+    const url = `https://github.com/InnaMikitich/PizzaReactProject/blob/main/public/db.json${
         category !== null ? `category=${category}` : ''
     }&_sort=${sortBy.type}&_order=${sortBy.order}`;
 
