@@ -18,7 +18,7 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
 export const fetchPizzas = (sortBy, category) => (dispatch) => {
     dispatch(setLoaded(false));
 
-    const API_BASE_URL = 'https://run.mocky.io/v3/2e22ea99-736a-4adb-92bd-eb3403e4bbbd';
+    const API_BASE_URL = 'http://localhost:3001';
     const url = `${API_BASE_URL}/pizzas?${
         category !== null ? `category=${category}` : ''
     }&_sort=${sortBy.type}&_order=${sortBy.order}`;
@@ -43,13 +43,5 @@ export const setPizzas = (items) => ({
 
 
 
-/*
-  const baseUrl = 'http://192.168.31.211:3001'; 
-
-  const url = `${baseUrl}/pizzas?${
-    category !== null ? `category=${category}&` : ''
-  }_sort=${sortBy.type}&_order=${sortBy.order}`;
-
-  console.log("Запрос к API:", url); */
 
 
