@@ -17,8 +17,9 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
 
 export const fetchPizzas = (sortBy, category) => (dispatch) => {
     dispatch(setLoaded(false));
-    
-    const url = `http://localhost:3001/pizzas?${
+
+    const API_BASE_URL = 'https://pizzas-gc9v0eu2r-inna-mikitichs-projects.vercel.app/';
+    const url = `${API_BASE_URL}/pizzas?${
         category !== null ? `category=${category}` : ''
     }&_sort=${sortBy.type}&_order=${sortBy.order}`;
 
